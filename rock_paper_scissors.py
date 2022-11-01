@@ -8,7 +8,7 @@ def who_wins(user, computer):
     elif computer == 2 and user == 1:
         return "Computer wins."
     elif computer == 1 and user == 3
-        return""
+        return"Conputer wins."
     pass
 
 
