@@ -1,6 +1,5 @@
 import random
 
-
 def cardchoice():
     input("Woukd you like another card? Type Y for yes, type N for no.")
     if ("Y"):
@@ -37,3 +36,12 @@ if wins:
 :param User: The user's card total
 :param Dealer: The dealer's card total
 '''
+
+def main():
+    print ("Welcome to the casino, let's play BlackJack!")
+    user = cardchoice()
+    user = user + cardchoice()
+    print ("You currently have a total of", (user))
+
+if __name__ == '__main__':
+    main()
