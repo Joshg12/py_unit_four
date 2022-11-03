@@ -42,6 +42,10 @@ def main():
     user = cardchoice()
     user = user + cardchoice()
     print ("You currently have a total of", (user))
+    user = user + cardchoice()
+    print ("You currently have a total of", (user))
+    user = user + cardchoice()
+    print("You currently have a total of", (user))
 
 if __name__ == '__main__':
     main()
