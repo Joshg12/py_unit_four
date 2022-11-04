@@ -37,9 +37,10 @@ if wins:
 def main():
     print ("Welcome to the casino, let's play BlackJack!")
     current = 0
+    current = getcard(current)
     choice = input("Woukd you like another card? Type Y for yes, type N for no.")
     if choice == "y":
-        usertot = getcard(current)
+        current = getcard(current)
     else:
         return "N"
     user = cardchoice()
