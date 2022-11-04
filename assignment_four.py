@@ -1,18 +1,13 @@
 import random
 
-def cardchoice():
-    input("Woukd you like another card? Type Y for yes, type N for no.")
-    if ("Y"):
-        return getcard()
-    else:
-        return "N"
+
 
 def getcard():
     x = random.randint(1, 10)
     print("You drew",x)
     return x
-def usertotal():
-    usertotal = getcard()
+def usertotal(current):
+    return current + getcard()
 
 def who_wins(user, dealer):
 
@@ -30,6 +25,8 @@ def who_wins(user, dealer):
         return"You win!"
 
 
+
+
 '''
 This function will tell us who
 if wins:
@@ -39,13 +36,26 @@ if wins:
 
 def main():
     print ("Welcome to the casino, let's play BlackJack!")
+    current = 0
+    choice = input("Woukd you like another card? Type Y for yes, type N for no.")
+    if choice == "y":
+        usertot = getcard(current)
+    else:
+        return "N"
     user = cardchoice()
     user = user + cardchoice()
-    print ("You currently have a total of", (user))
+    print ("User currently have a total of", (user))
     user = user + cardchoice()
-    print ("You currently have a total of", (user))
+    print ("User currently have a total of", (user))
     user = user + cardchoice()
-    print("You currently have a total of", (user))
+    print("User currently have a total of", (user))
+    dealer = cardchoice()
+    dealer = dealer + cardchoice()
+    print("Dealer currently have a total of", (dealer))
+    dealer = dealer + cardchoice()
+    print("Dealer currently have a total of", (dealer))
+
 
 if __name__ == '__main__':
     main()
+
