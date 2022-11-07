@@ -43,6 +43,7 @@ def main():
         current = getcard(current)
     else:
         return "N"
+    def
     user = cardchoice()
     user = user + cardchoice()
     print ("User currently have a total of", (user))
