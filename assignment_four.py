@@ -2,10 +2,11 @@ import random
 
 
 
-def getcard():
+def getcard(current):
     x = random.randint(1, 10)
     print("You drew",x)
-    return x
+    current = current + x
+    return current
 def usertotal(current):
     return current + getcard()
 
@@ -24,9 +25,6 @@ def who_wins(user, dealer):
     elif user >= dealer:
         return"You win!"
 
-
-
-
 '''
 This function will tell us who
 if wins:
@@ -41,9 +39,30 @@ def main():
     choice = input("Woukd you like another card? Type Y for yes, type N for no.")
     if choice == "y":
         current = getcard(current)
+        print (current)
     else:
         return "N"
-    def
+    choice = input("Woukd you like another card? Type Y for yes, type N for no.")
+    if choice == "y":
+        current = getcard(current)
+        print(current)
+    else:
+        return "N"
+    choice = input("Woukd you like another card? Type Y for yes, type N for no.")
+    if choice == "y":
+        current = getcard(current)
+        print(current)
+    else:
+        return "N"
+    choice = input("Woukd you like another card? Type Y for yes, type N for no.")
+    if choice == "y":
+        current = getcard(current)
+        print(current)
+    else:
+        return "N"
+
+
+"""
     user = cardchoice()
     user = user + cardchoice()
     print ("User currently have a total of", (user))
@@ -56,7 +75,7 @@ def main():
     print("Dealer currently have a total of", (dealer))
     dealer = dealer + cardchoice()
     print("Dealer currently have a total of", (dealer))
-
+"""
 
 if __name__ == '__main__':
     main()
