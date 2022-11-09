@@ -4,7 +4,7 @@ import random
 
 def getcard(current):
     x = random.randint(1, 10)
-    print("You drew",x)
+    print(x,"Has been drawn")
     current = current + x
     return current
 def usertotal(current):
@@ -25,6 +25,10 @@ def who_wins(user, dealer):
     elif user >= dealer:
         return"You win!"
 
+def dealertotal(decurrent):
+    dealercard = getcard(decurrent)
+    print(dealercard)
+    return dealercard
 '''
 This function will tell us who
 if wins:
@@ -60,6 +64,13 @@ def main():
         print(current)
     else:
         return "N"
+
+    decurrent = 0
+    decurrent2 = dealertotal(decurrent)
+    print ("The dealer currently has", decurrent2)
+    decurrent3 = dealertotal(decurrent2)
+    print("The dealer currently has", decurrent3)
+
 
 
 """
