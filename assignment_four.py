@@ -10,6 +10,10 @@ def getcard(current):
 def usertotal(current):
     return current + getcard()
 
+"""
+This code generates a random number for the user and the dealer.
+"""
+
 def who_wins(user, dealer):
 
     if dealer >= 21 and user >= 21:
@@ -71,7 +75,10 @@ def main():
     decurrent3 = dealertotal(decurrent2)
     print("The dealer currently has", decurrent3)
 
-
+    """
+    This code manages the dealer's total.
+    """
+    who_wins()
 
 """
     user = cardchoice()
